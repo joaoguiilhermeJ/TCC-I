@@ -1,0 +1,30 @@
+# Arquivos auxiliares gerados pelo LaTeX/BibTeX/latexmk
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Saida compilada principal
+/documento.pdf
+
+# Backups e arquivos temporarios
+*.bak
+*.bak-*
+*~
+*.tmp
+*.swp
+*.swo
+
+# Configuracoes locais de ferramentas/agentes
+/.agents/
+/.codex/
