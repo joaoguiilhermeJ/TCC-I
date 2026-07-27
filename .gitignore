@@ -1,0 +1,43 @@
+# Arquivos auxiliares gerados pelo LaTeX/BibTeX/latexmk
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+
+# Saida compilada principal
+/documento.pdf
+
+# Backups e arquivos temporarios
+*.bak
+*.bak-*
+*~
+*.tmp
+*.swp
+*.swo
+
+# Variaveis e credenciais
+.env
+.env.*
+*.key
+*.pem
+
+# Sistema e editor
+.DS_Store
+.vscode/
+
+# Configuracoes locais de ferramentas/agentes
+/.agents/
+/.codex/
