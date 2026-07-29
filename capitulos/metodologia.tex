@@ -16,3 +16,98 @@ Com base nos estudos analisados, serão definidos os requisitos funcionais e nã
 Após a definição dos requisitos, serão elaborados a arquitetura, o modelo de dados e os principais fluxos de funcionamento. O modelo será organizado de forma que cada publicação permaneça vinculada ao jogador responsável, ao jogo correspondente e à categoria selecionada, como sugestão, ideia, avaliação ou relato de problema.
 
 O protótipo será desenvolvido utilizando TypeScript no ambiente Node.js, com o framework NestJS para a organização das funcionalidades. O PostgreSQL será utilizado para o armazenamento dos dados, enquanto o Prisma será responsável pela comunicação com o banco e pelo gerenciamento de sua estrutura. As operações disponibilizadas serão documentadas por meio do Swagger.
+
+A Figura \ref{fig:metodologia} sintetiza as etapas metodológicas adotadas para o desenvolvimento do protótipo.
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+    font=\footnotesize,
+    bloco/.style={
+        draw,
+        rounded corners=3pt,
+        align=center,
+        text width=4.2cm,
+        minimum height=2.3cm,
+        fill=white,
+        inner sep=6pt,
+        line width=0.6pt
+    },
+    etapa/.style={
+        draw,
+        rounded corners=4pt,
+        fill=gray!8,
+        line width=0.7pt
+    },
+    titulo/.style={
+        font=\bfseries\small,
+        align=center
+    },
+    seta/.style={
+        -{Latex[length=2.5mm,width=1.8mm]},
+        line width=0.7pt
+    }
+]
+
+% Fundos das etapas (desenhados primeiro para permanecerem atrás do conteúdo)
+\draw[etapa] (-7.4,0.5) rectangle (7.4,-4.8);
+\draw[etapa] (-7.4,-5.0) rectangle (7.4,-9.45);
+
+% Etapa 1
+\node[titulo] at (0,0) {Etapa 1: Levantamento bibliográfico e definição dos requisitos};
+
+\node[bloco] (levantamento) at (-2.7,-2.45) {
+    \textbf{Levantamento bibliográfico}\\[0.15cm]
+    Jogos digitais\\
+    Conteúdos produzidos por jogadores\\
+    Organização de informações\\
+    Gestão de dados em aplicações web
+};
+
+\node[bloco] (requisitos) at (2.7,-2.45) {
+    \textbf{Definição dos requisitos}\\[0.15cm]
+    Requisitos funcionais\\
+    Requisitos não funcionais\\
+    Cadastro de usuários e jogos\\
+    Publicação, classificação e consulta
+};
+
+% Etapa 2
+\node[titulo] at (0,-5.5) {Etapa 2: Modelagem e desenvolvimento do protótipo};
+
+\node[bloco] (modelagem) at (-4.9,-7.6) {
+    \textbf{Modelagem da solução}\\[0.15cm]
+    Arquitetura da API\\
+    Modelo de dados\\
+    Fluxos de funcionamento
+};
+
+\node[bloco] (organizacao) at (0,-7.6) {
+    \textbf{Organização das publicações}\\[0.15cm]
+    Jogador responsável\\
+    Jogo correspondente\\
+    Categoria selecionada\\
+    Sugestão, ideia, avaliação ou relato
+};
+
+\node[bloco] (desenvolvimento) at (4.9,-7.6) {
+    \textbf{Desenvolvimento do protótipo}\\[0.15cm]
+    TypeScript e Node.js\\
+    NestJS\\
+    PostgreSQL e Prisma\\
+    Swagger
+};
+
+% Setas em espaços livres, sem atravessar textos
+\draw[seta] (levantamento.east) -- (requisitos.west);
+\draw[seta] (modelagem.east) -- (organizacao.west);
+\draw[seta] (organizacao.east) -- (desenvolvimento.west);
+\draw[seta] (0,-4.8) -- (0,-5.0);
+
+\end{tikzpicture}
+}
+\caption{Etapas metodológicas adotadas para o desenvolvimento do protótipo}
+\label{fig:metodologia}
+\fonte{Elaborado pelo autor (2026).}
+\end{figure}
